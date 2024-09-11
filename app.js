@@ -3,7 +3,6 @@ let valorMaximo = 100;
 let numeroSecreto = gerarAleatorio(valorMaximo);
 let tentativas = 1;
 let fraseInicial = `Escolha um número entre 1 e ${valorMaximo}.`;
-console.log(numeroSecreto);
 
 textoInicial();
 
@@ -52,12 +51,10 @@ function gerarAleatorio(maximo){
         listaDeNumerosSorteados = [];
     }
     if (listaDeNumerosSorteados.includes(numeroEscolhido)){
-        console.log(numeroEscolhido);
         console.log(listaDeNumerosSorteados);
         return gerarAleatorio(maximo);
 
     }else{
-        console.log(numeroEscolhido);
         listaDeNumerosSorteados.push(numeroEscolhido);
         return numeroEscolhido;
     }
@@ -76,5 +73,4 @@ function reiniciarJogo(){
     numeroSecreto = gerarAleatorio(valorMaximo);
     tentativas = 1;
     textoInicial();
-    console.log(numeroSecreto);
 }
